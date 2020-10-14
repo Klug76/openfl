@@ -74,6 +74,8 @@ extern class TextField extends InteractiveObject
 	#if flash
 	@:require(flash10) public static function isFontCompatible(fontName:String, fontStyle:FontStyle):Bool;
 	#end
+	public function getXMLText(beginIndex : Int = 0, endIndex : Int = 2147483647) : String;
+	public function insertXMLText(beginIndex : Int, endIndex : Int, richText : String, pasting : Bool = false) : Void;
 	public function replaceSelectedText(value:String):Void;
 	public function replaceText(beginIndex:Int, endIndex:Int, newText:String):Void;
 	public function setSelection(beginIndex:Int, endIndex:Int):Void;
